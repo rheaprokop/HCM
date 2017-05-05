@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="/WEB-INF/template/default_layout.xhtml">
+
+	<ui:define name="morecss">
+		<h:outputStylesheet library="assets"
+			name="global/plugins/bootstrap-daterangepicker/daterangepicker.min.css" />
+		<h:outputStylesheet library="assets"
+			name="global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
+		<h:outputStylesheet library="assets"
+			name="global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css" />
+		<h:outputStylesheet library="assets"
+			name="global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" />
+	</ui:define>
+	<ui:define name="content">
+		<!-- BEGIN CONTENT BODY -->
+		<div class="page-content">
+			<!-- BEGIN PAGE HEADER-->
+			<!-- BEGIN THEME PANEL -->
+			<ui:include src="/WEB-INF/template/uisetting.xhtml" />
+			<!-- END THEME PANEL -->
+			<!-- BEGIN PAGE BAR -->
+			<div class="page-bar">
+				<ul class="page-breadcrumb">
+					<li><a href="index.html">Home</a> <i class="fa fa-circle"></i>
+					</li>
+					<li><span>Request For Trainings</span></li>
+				</ul>
+				<div class="page-toolbar">
+					<div class="btn-group pull-right">
+						<button type="button"
+							class="btn green btn-sm btn-outline dropdown-toggle"
+							data-toggle="dropdown">
+							Actions <i class="fa fa-angle-down"></i>
+						</button>
+						<ul class="dropdown-menu pull-right" role="menu">
+							<li><a href="#"> <i class="icon-bell"></i> Action
+							</a></li>
+							<li><a href="#"> <i class="icon-shield"></i> Another
+									action
+							</a></li>
+							<li><a href="#"> <i class="icon-user"></i> Something
+									else here
+							</a></li>
+							<li class="divider"></li>
+							<li><a href="#"> <i class="icon-bag"></i> Separated link
+							</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- END PAGE BAR -->
+			<!-- BEGIN PAGE TITLE-->
+			<h3 class="page-title">
+				Request for Trainings Application <small>Fill up the form
+					to apply Trainings</small>
+			</h3>
+			<!-- END PAGE TITLE-->
+			<!-- END PAGE HEADER-->
+			<div class="row">
+				<div class="col-md-8 ">
+					<!-- BEGIN SAMPLE FORM PORTLET-->
+					<div class="portlet light bordered">
+						<div class="portlet-title">
+							<div class="caption font-red-sunglo">
+								<span class="caption-subject bold uppercase">Request Form</span>
+							</div>
+							<div class="actions">
+								<a class="btn btn-circle btn-icon-only blue" href="javascript:;">
+									<i class="icon-cloud-upload"></i>
+								</a> <a class="btn btn-circle btn-icon-only green"
+									href="javascript:;"> <i class="icon-wrench"></i>
+								</a> <a class="btn btn-circle btn-icon-only red" href="javascript:;">
+									<i class="icon-trash"></i>
+								</a> <a class="btn btn-circle btn-icon-only btn-default fullscreen"
+									href="javascript:;" data-original-title="" title=""> </a>
+							</div>
+						</div>
+						<div class="portlet-body form">
+							<h:form role="form">
+								<div class="form-body">
+									<div
+										class="form-group form-md-line-input form-md-floating-label">
+										<div class="input-icon right">
+											<input type="text" class="form-control" readonly="true"
+												value="John Smith"></input> <label
+												for="form_control_1">Employee Name</label> <i
+												class="icon-user"></i>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6">
+											<div
+												class="form-group form-md-line-input form-md-floating-label">
+												<input type="text" value="My Department" class="form-control"
+													id="form_control_1" readonly="true"></input> <label
+													for="form_control_1">Department Name</label>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div
+												class="form-group form-md-line-input  form-md-floating-label">
+												<input type="text" value="Christopher Pike"
+													class="form-control" id="form_control_1" readonly="true"></input>
+												<label for="form_control_1">Approving Manager</label>
+											</div>
+										</div>
+									</div>
+									<h3 class="form-section">Trainings Information Details</h3>
+									
+									<div
+										class="form-group form-md-line-input has-success form-md-floating-label">
+										<div class="input-icon right">
+											<select class="form-control" id="form_control_1">
+												<option value=""></option>
+												<option value="1">Option 1</option>
+												<option value="2">Option 2</option>
+												<option value="3">Option 3</option>
+												<option value="4">Option 4</option>
+											</select> <label for="form_control_1">Select from Available Trainings</label>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6">
+											<div
+												class="form-group form-md-line-input form-md-floating-label">
+												<div class="input-group date form_datetime">
+													<div class="input-group-control">
+														<input type="text" class="form-control" readonly="true"></input>
+														<label for="form_control_1">From Date</label>
+													</div>
+													<span class="input-group-btn  btn-right">
+														<button class="btn blue-madison date-set" type="button">
+															<i class="fa fa-calendar"></i>
+														</button>
+													</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-md-6">
+											<div
+												class="form-group form-md-line-input form-md-floating-label">
+												<div class="input-group date form_datetime">
+													<div class="input-group-control">
+														<input type="text" class="form-control" readonly="true"></input>
+														<label for="form_control_1">To Date</label>
+													</div>
+													<span class="input-group-btn btn-right">
+														<button class="btn blue-madison date-set" type="button">
+															<i class="fa fa-calendar"></i>
+														</button>
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div
+										class="form-group form-md-line-input form-md-floating-label">
+										<textarea class="form-control" rows="3"></textarea>
+										<label for="form_control_1">Reason for Trainings</label>
+									</div>
+									<div class="form-actions noborder">
+										<button type="button" class="btn blue">Submit</button>
+										<button type="button" class="btn default">Cancel</button>
+									</div>
+								</div>
+							</h:form>
+						</div>
+					</div>
+					<!-- END SAMPLE FORM PORTLET-->
+				</div>
+				<div class="col-md-4">
+					<!-- BEGIN SAMPLE TABLE PORTLET-->
+					<div class="portlet box yellow">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-archive"></i>My Trainings Balance
+							</div>
+							<div class="tools">
+								<a href="javascript:;" class="collapse"> </a> <a
+									href="#portlet-config" data-toggle="modal" class="config">
+								</a> <a href="javascript:;" class="reload"> </a> <a
+									href="javascript:;" class="remove"> </a>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="table-scrollable">
+								<table class="table table-bordered table-hover">
+									<thead>
+										<tr>
+											<th>Available Trainings </th>
+											<th>Dates (in days)</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="success">success</td>
+											<td class="warning">warning</td>
+										</tr>
+										<tr>
+											<td class="success">success</td>
+											<td class="warning">warning</td>
+										</tr>
+										<tr>
+											<td class="success">success</td>
+											<td class="warning">warning</td>
+										</tr>
+										<tr>
+											<td class="success">success</td>
+											<td class="warning">warning</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- END SAMPLE TABLE PORTLET-->
+				</div>
+			</div>
+		</div>
+		<!-- END CONTENT BODY -->
+	</ui:define>
+	<ui:define name="morejs">
+		<h:outputScript library="assets" name="global/plugins/moment.min.js" />
+		<h:outputScript library="assets"
+			name="global/plugins/bootstrap-daterangepicker/daterangepicker.min.js" />
+		<h:outputScript library="assets"
+			name="global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" />
+		<h:outputScript library="assets"
+			name="global/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js" />
+		<h:outputScript library="assets"
+			name="global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" />
+		<h:outputScript library="assets"
+			name="pages/scripts/components-date-time-pickers.min.js" />
+
+	</ui:define>
+</ui:composition>
+</html>

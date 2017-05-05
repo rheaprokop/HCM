@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="/WEB-INF/template/default_layout.xhtml"> 
+
+	<ui:define name="content"> 
+	    <!-- BEGIN CONTENT BODY -->
+				<div class="page-content">
+					<!-- BEGIN PAGE HEADER-->
+					<!-- BEGIN THEME PANEL -->
+					 <ui:include src="/WEB-INF/template/uisetting.xhtml" />
+					 	<!-- END THEME PANEL -->
+					<!-- BEGIN PAGE BAR -->
+					<div class="page-bar">
+						<ul class="page-breadcrumb">
+							<li><a href="index.html">Home</a> <i class="fa fa-circle"></i>
+							</li>
+							<li><span>Horizontal Menu</span></li>
+						</ul>
+						<div class="page-toolbar">
+							<div class="btn-group pull-right">
+								<button type="button"
+									class="btn green btn-sm btn-outline dropdown-toggle"
+									data-toggle="dropdown">
+									Actions <i class="fa fa-angle-down"></i>
+								</button>
+								<ul class="dropdown-menu pull-right" role="menu">
+									<li><a href="#"> <i class="icon-bell"></i> Action
+									</a></li>
+									<li><a href="#"> <i class="icon-shield"></i> Another
+											action
+									</a></li>
+									<li><a href="#"> <i class="icon-user"></i> Something
+											else here
+									</a></li>
+									<li class="divider"></li>
+									<li><a href="#"> <i class="icon-bag"></i> Separated
+											link
+									</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- END PAGE BAR -->
+					<!-- BEGIN PAGE TITLE-->
+					<h3 class="page-title">
+						User Profile <small>You are currently viewing a selected user profile.</small>
+					</h3>
+					<!-- END PAGE TITLE-->
+					<!-- END PAGE HEADER-->
+					<div class="profile">
+						 <div class="row profile-account">
+                                        <div class="col-md-3">
+                                            <ul class="ver-inline-menu tabbable margin-bottom-10">
+                                                <li class="active">
+                                                    <a data-toggle="tab" href="#tab_1-1">
+                                                        <i class="fa fa-cog"></i> User info </a>
+                                                    <span class="after"> </span>
+                                                </li>
+                                                <li>
+                                                    <a data-toggle="tab" href="#tab_2-2">
+                                                        <i class="fa fa-picture-o"></i> Change Avatar </a>
+                                                </li>
+                                                <li>
+                                                    <a data-toggle="tab" href="#tab_3-3">
+                                                        <i class="fa fa-lock"></i> Change Password </a>
+                                                </li>
+                                                <li>
+                                                    <a data-toggle="tab" href="#tab_4-4">
+                                                        <i class="fa fa-eye"></i> Privacity Settings </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="tab-content">
+                                                <div id="tab_1-1" class="tab-pane active">
+                                                    <form role="form" action="#">
+                                                        <div class="form-group">
+                                                            <label class="control-label">First Name</label>
+                                                            <input type="text" placeholder="John" class="form-control" /> </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">Last Name</label>
+                                                            <input type="text" placeholder="Doe" class="form-control" /> </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">Phone</label>
+                                                            <input type="text" placeholder="+1 646 580 DEMO (6284)" class="form-control" /> </div> 
+                                                        <div class="form-group">
+                                                            <label class="control-label">Occupation</label>
+                                                            <input type="text" placeholder="Web Developer" class="form-control" /> </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">About</label>
+                                                            <textarea class="form-control" rows="3" placeholder="We are KeenThemes!!!"></textarea>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">Website Url</label>
+                                                            <input type="text" placeholder="http://www.mywebsite.com" class="form-control" /> </div>
+                                                        <div class="margiv-top-10">
+                                                            <a href="javascript:;" class="btn green"> Save Changes </a>
+                                                            <a href="javascript:;" class="btn default"> Cancel </a>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div id="tab_2-2" class="tab-pane">
+                                                    <p> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                        </p>
+                                                    <form action="#" role="form">
+                                                        <div class="form-group">
+                                                            <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                                <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+                                                                    <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="" /> </div>
+                                                                <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"> </div>
+                                                                
+                                                            </div>
+                                                            <div class="clearfix margin-top-10">
+                                                                <span class="label label-danger"> NOTE! </span>
+                                                                <span> Attached image thumbnail is supported in Latest Firefox, Chrome, Opera, Safari and Internet Explorer 10 only </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="margin-top-10">
+                                                            <a href="javascript:;" class="btn green"> Submit </a>
+                                                            <a href="javascript:;" class="btn default"> Cancel </a>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div id="tab_3-3" class="tab-pane">
+                                                    <form action="#">
+                                                        <div class="form-group">
+                                                            <label class="control-label">Current Password</label>
+                                                            <input type="password" class="form-control" /> </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">New Password</label>
+                                                            <input type="password" class="form-control" /> </div>
+                                                        <div class="form-group">
+                                                            <label class="control-label">Re-type New Password</label>
+                                                            <input type="password" class="form-control" /> </div>
+                                                        <div class="margin-top-10">
+                                                            <a href="javascript:;" class="btn green"> Change Password </a>
+                                                            <a href="javascript:;" class="btn default"> Cancel </a>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div id="tab_4-4" class="tab-pane">
+                                                    <form action="#">
+                                                        <table class="table table-bordered table-striped">
+                                                            <tr>
+                                                                <td> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus.. </td>
+                                                                <td>
+                                                                    <div class="mt-radio-inline">
+                                                                        <label class="mt-radio">
+                                                                            <input type="radio" name="optionsRadios1" value="option1" /> Yes
+                                                                            <span></span>
+                                                                        </label>
+                                                                        <label class="mt-radio">
+                                                                            <input type="radio" name="optionsRadios1" value="option2"  /> No
+                                                                            <span></span>
+                                                                        </label>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td> Enim eiusmod high life accusamus terry richardson ad squid wolf moon </td>
+                                                                <td>
+                                                                    <div class="mt-radio-inline">
+                                                                        <label class="mt-radio">
+                                                                            <input type="radio" name="optionsRadios21" value="option1" /> Yes
+                                                                            <span></span>
+                                                                        </label>
+                                                                        <label class="mt-radio">
+                                                                            <input type="radio" name="optionsRadios21" value="option2"  /> No
+                                                                            <span></span>
+                                                                        </label>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td> Enim eiusmod high life accusamus terry richardson ad squid wolf moon </td>
+                                                                <td>
+                                                                    <div class="mt-radio-inline">
+                                                                        <label class="mt-radio">
+                                                                            <input type="radio" name="optionsRadios31" value="option1" /> Yes
+                                                                            <span></span>
+                                                                        </label>
+                                                                        <label class="mt-radio">
+                                                                            <input type="radio" name="optionsRadios31" value="option2"  /> No
+                                                                            <span></span>
+                                                                        </label>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td> Enim eiusmod high life accusamus terry richardson ad squid wolf moon </td>
+                                                                <td>
+                                                                    <div class="mt-radio-inline">
+                                                                        <label class="mt-radio">
+                                                                            <input type="radio" name="optionsRadios41" value="option1" /> Yes
+                                                                            <span></span>
+                                                                        </label>
+                                                                        <label class="mt-radio">
+                                                                            <input type="radio" name="optionsRadios41" value="option2"  /> No
+                                                                            <span></span>
+                                                                        </label>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <!--end profile-settings-->
+                                                        <div class="margin-top-10">
+                                                            <a href="javascript:;" class="btn green"> Save Changes </a>
+                                                            <a href="javascript:;" class="btn default"> Cancel </a>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end col-md-9-->
+                                    </div>
+					</div>
+				</div>
+				<!-- END CONTENT BODY -->
+	</ui:define> 
+</ui:composition>
+</html>

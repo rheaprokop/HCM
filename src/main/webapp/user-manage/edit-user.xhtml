@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/WEB-INF/template/default_layout.xhtml">
+<ui:define name="morecss">
+		<h:outputStylesheet library="assets"
+			name="global/plugins/bootstrap-daterangepicker/daterangepicker.min.css" />
+		<h:outputStylesheet library="assets"
+			name="global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
+		<h:outputStylesheet library="assets"
+			name="global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css" />
+		<h:outputStylesheet library="assets"
+			name="global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" />
+		<h:outputStylesheet library="assets"
+			name="global/plugins/datatables/datatables.min.css" />
+		<h:outputStylesheet library="assets"
+			name="global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css" />
+
+
+
+	</ui:define>
+	<ui:define name="content">
+		<!-- BEGIN CONTENT BODY -->
+		<div class="page-content">
+			<!-- BEGIN PAGE HEADER-->
+			<!-- BEGIN THEME PANEL -->
+			<ui:include src="/WEB-INF/template/uisetting.xhtml" />
+			<!-- END THEME PANEL -->
+			<!-- BEGIN PAGE BAR -->
+			<div class="page-bar">
+				<ul class="page-breadcrumb">
+					<li><a href="index.html">Home</a> <i class="fa fa-circle"></i>
+					</li>
+					<li><span>Horizontal Menu</span></li>
+				</ul>
+				<div class="page-toolbar">
+					<div class="btn-group pull-right">
+						<button type="button"
+							class="btn green btn-sm btn-outline dropdown-toggle"
+							data-toggle="dropdown">
+							Actions <i class="fa fa-angle-down"></i>
+						</button>
+						<ul class="dropdown-menu pull-right" role="menu">
+							<li><a href="#"> <i class="icon-bell"></i> Action
+							</a></li>
+							<li><a href="#"> <i class="icon-shield"></i> Another
+									action
+							</a></li>
+							<li><a href="#"> <i class="icon-user"></i> Something
+									else here
+							</a></li>
+							<li class="divider"></li>
+							<li><a href="#"> <i class="icon-bag"></i> Separated link
+							</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- END PAGE BAR -->
+			<!-- BEGIN PAGE TITLE-->
+			<h3 class="page-title">
+				Currently Updating <small> - #{userModel.firstName} #{userModel.lastName} (#{userModel.email})</small>
+			</h3>
+			<!-- END PAGE TITLE-->
+			<!-- END PAGE HEADER-->
+			<div class="profile">
+				<div class="row profile-account">
+					<div class="col-md-3">
+						<ul class="ver-inline-menu tabbable margin-bottom-10">
+							<li class="active"><a data-toggle="tab" href="#tab_1-1">
+									<i class="fa fa-cog"></i> User info
+							</a> <span class="after"> </span></li>
+							<li><a data-toggle="tab" href="#tab_2-2"> <i
+									class="fa fa-picture-o"></i> Add / Change Avatar
+							</a></li>
+							<li><a data-toggle="tab" href="#tab_3-3"> <i
+									class="fa fa-lock"></i> Change Password
+							</a></li>
+							<li><a data-toggle="tab" href="#tab_4-4"> <i
+									class="fa fa-eye"></i> Assign Roles
+							</a></li>
+							<li><a data-toggle="tab" href="#tab_5-5"> <i
+									class="fa fa-eye"></i> Other Settings
+							</a></li>
+						</ul>
+					</div>
+					<div class="col-md-9"> 
+						<div class="tab-content">
+							<div id="tab_1-1" class="tab-pane active">
+								<div class="portlet light bg-inverse"> 
+									<div class="portlet-body form">
+										<!-- BEGIN FORM-->
+										<h:form role="form" id="frmUser" class="form-user form-horizontal">  
+											<div class="form-body">
+												<h3 class="form-section">Person Info</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="control-label col-md-3">First Name</label>
+															<div class="col-md-9">
+																<h:inputText id="firstname" name="firstname"
+																	value="#{userModel.firstName}" required="true"
+																	class="form-control" />
+															</div>
+														</div>
+													</div>
+													<!--/span-->
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="control-label col-md-3">Last Name</label>
+															<div class="col-md-9">
+																<h:inputText id="lastname" name="lastname"
+																	value="#{userModel.lastName}" required="true"
+																	class="form-control" />
+															</div>
+														</div>
+													</div>
+													<!--/span-->
+												</div>
+												<!--/row-->
+												<div class="row">
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="control-label col-md-3">Email</label>
+															<div class="col-md-9">
+																<h:inputText type="email" id="email" name="email"
+																	value="#{userModel.email}" required="true"
+																	class="form-control" />
+															</div>
+														</div>
+													</div>
+													<!--/span-->
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="control-label col-md-3">Phone</label>
+															<div class="col-md-9">
+																<h:inputText id="phone" name="phone"
+																	value="#{userModel.phone}" 
+																	class="form-control" />
+															</div>
+														</div>
+													</div>
+													<!--/span-->
+												</div>
+												<!--/row-->
+												<div class="row">
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="control-label col-md-3">Remarks</label>
+															<div class="col-md-9">
+															<h:inputTextarea cols="30" rows="5" value="#{userModel.remark}" styleClass="form-control" placeholder="This textarea has a limit of 225 chars." /> 
+<!-- 																<div class="radio-list"> -->
+<!-- 																	<label class="radio-inline"> <input -->
+<!-- 																		type="radio" name="optionsRadios2" value="option1" /> -->
+<!-- 																		Free -->
+<!-- 																	</label> <label class="radio-inline"> <input -->
+<!-- 																		type="radio" name="optionsRadios2" value="option2" /> -->
+<!-- 																		Professional -->
+<!-- 																	</label> -->
+<!-- 																</div> -->
+	
+															</div>
+															
+														</div>
+													</div>
+													<!--/span-->
+													<div class="col-md-6">
+														<div class="form-group">
+														<label class="control-label col-md-3">Status</label>
+															<div class="col-md-9">
+															<h:selectBooleanCheckbox value="#{userModel.isEnabled}" styleClass="make-switch"  
+															data-on-text="&nbsp;Enabled&nbsp;&nbsp;" data-off-text="&nbsp;Disabled&nbsp;" /> 
+															</div>
+														</div>
+													</div>
+													<!--/span-->
+												</div>
+												 
+												<!--/row-->  
+											</div>
+											<div class="form-actions">
+												<div class="row">
+													<div class="col-md-6">
+														<div class="row">
+															<div class="col-md-offset-3 col-md-9">
+																 <h:commandButton value="Save &amp; Update User"
+										styleClass="btn blue"
+										action="#{userBean.editUser}" />  
+										<button type="button" class="btn default"
+																	onclick="window.history.back()">Back</button>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-6"></div>
+												</div>
+											</div>
+										</h:form>
+										<!-- END FORM-->
+									</div>
+								</div>
+							</div>
+							<div id="tab_2-2" class="tab-pane"> 
+								<p>Anim pariatur cliche reprehenderit, enim eiusmod high
+									life accusamus terry richardson ad squid. 3 wolf moon officia
+									aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+									nesciunt laborum eiusmod.</p>
+								<form action="#" role="form">
+									<div class="form-group">
+										<div class="fileinput fileinput-new" data-provides="fileinput">
+											<div class="fileinput-new thumbnail"
+												style="width: 200px; height: 150px;">
+												<img
+													src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image"
+													alt="" />
+											</div>
+											<div class="fileinput-preview fileinput-exists thumbnail"
+												style="max-width: 200px; max-height: 150px;"></div>
+
+										</div>
+										<div class="clearfix margin-top-10">
+											<span class="label label-danger"> NOTE! </span> <span>
+												Attached image thumbnail is supported in Latest Firefox,
+												Chrome, Opera, Safari and Internet Explorer 10 only </span>
+										</div>
+									</div>
+									<div class="margin-top-10">
+										<a href="javascript:;" class="btn green"> Submit </a> <a
+											href="javascript:;" class="btn default"> Cancel </a>
+									</div>
+								</form>
+							</div>
+							<div id="tab_3-3" class="tab-pane">
+								<h:form>
+									<div class="form-group">
+										<label class="control-label">Current Password</label> 
+										<h:inputSecret id="currentpassword" name="currentpassword" styleClass="form-control"></h:inputSecret>
+									</div>
+									<div class="form-group">
+										<label class="control-label">New Password</label>
+										<h:inputSecret id="newpassword" name="newpassword" styleClass="form-control"></h:inputSecret>
+									</div>
+									<div class="form-group">
+										<label class="control-label">Re-type New Password</label> 
+										<h:inputSecret id="retypepassword" name="retypepassword" styleClass="form-control"></h:inputSecret>
+									</div>
+									<div class="margin-top-10">
+										 
+										<h:commandButton value="Change Password"
+										styleClass="btn green"
+										action="#{userBean.changePassword}" /> 
+										 
+									</div>
+								</h:form>
+							</div>
+							<div id="tab_4-4" class="tab-pane">
+							<h:form id="tblUser"> 
+									<h:dataTable  value="#{roleBean.roleList}" var="r"
+								styleClass="table table-striped table-bordered table-hover table-checkable order-column tbldesign1"
+								headerClass="header" rowClasses="oddrow,evenrow">
+								<h:column>
+									<f:facet name="header">
+										<input type="checkbox" class="group-checkable"
+											data-set=".tbldesign1 .checkboxes" />
+									</f:facet> 
+									<h:selectBooleanCheckbox value="#{userBean.checked[r.id]}" styleClass="checkboxes group-checkable" />
+									
+								</h:column>
+								<h:column>
+									<f:facet name="header"> Roles Permission</f:facet>
+						               #{r.permission}
+						         </h:column>
+								<h:column>
+									<f:facet name="header"> Role Name</f:facet>
+						                 #{r.roleName}
+						         </h:column>
+								<h:column>
+									<f:facet name="header"> Role Description</f:facet>
+						                 #{r.roleDescription}
+						         </h:column>
+								<h:column>
+									<f:facet name="header"> Status</f:facet>
+
+									<h:panelGroup rendered="#{r.isEnabled == true}">
+										<label class="btn green btn-outline btn-circle btn-sm active">Enabled</label>
+									</h:panelGroup>
+									<h:panelGroup rendered="#{r.isEnabled == false}">
+										<label class="btn red btn-outline btn-circle btn-sm">Disabled</label>
+									</h:panelGroup>
+
+								</h:column> 
+							   </h:dataTable>
+									<!--end profile-settings-->
+									<div class="margin-top-10">
+									<h:inputHidden value="#{userModel.id}" name="id"  />
+										<h:commandButton styleClass="btn sbold green" value="Save Roles" action="#{userBean.saveRoles}">
+										</h:commandButton> <a
+											href="javascript:;" class="btn default"> Cancel </a>
+									</div>
+									</h:form> 
+							</div>
+						</div>
+					</div>
+					<!--end col-md-9-->
+				</div>
+			</div>
+		</div>
+		<!-- END CONTENT BODY --> 
+	</ui:define>
+	<ui:define name="morejs">
+		<h:outputScript library="assets" name="global/plugins/moment.min.js" />
+		<h:outputScript library="assets"
+			name="global/plugins/jquery-validation/js/jquery.validate.min.js" />
+		<h:outputScript library="assets"
+			name="global/plugins/jquery-validation/js/additional-methods.min.js" />
+		<h:outputScript library="assets"
+			name="pages/scripts/hcm_create_user_validation.js" />
+		<h:outputScript library="assets" name="global/scripts/datatable.js" />
+		<h:outputScript library="assets"
+			name="global/plugins/datatables/datatables.min.js" />
+		<h:outputScript library="assets"
+			name="global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js" />
+		<h:outputScript library="assets"
+			name="pages/scripts/table-datatables-managed.min.js" />
+	</ui:define>
+</ui:composition>
+</html>

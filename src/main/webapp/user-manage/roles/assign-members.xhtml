@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="/WEB-INF/template/default_layout.xhtml"> 
+
+	<ui:define name="morecss">
+		<h:outputStylesheet library="assets"
+			name="global/plugins/bootstrap-select/css/bootstrap-select.min.css" />
+		<h:outputStylesheet library="assets"
+			name="global/plugins/jquery-multi-select/css/multi-select.css" />
+		<h:outputStylesheet library="assets"
+			name="global/plugins/select2/css/select2.min.css" />
+		<h:outputStylesheet library="assets"
+			name="global/plugins/select2/css/select2-bootstrap.min.css" />
+	</ui:define>
+	<ui:define name="content"> 
+	    <!-- BEGIN CONTENT BODY -->
+				<div class="page-content">
+					<!-- BEGIN PAGE HEADER-->
+					<!-- BEGIN THEME PANEL -->
+					 <ui:include src="/WEB-INF/template/uisetting.xhtml" />
+					 	<!-- END THEME PANEL -->
+					<!-- BEGIN PAGE BAR -->
+					<div class="page-bar">
+						<ul class="page-breadcrumb">
+							<li><a href="index.html">Home</a> <i class="fa fa-circle"></i>
+							</li>
+							<li><span>Horizontal Menu</span></li>
+						</ul>
+						<div class="page-toolbar">
+							<div class="btn-group pull-right">
+								<button type="button"
+									class="btn green btn-sm btn-outline dropdown-toggle"
+									data-toggle="dropdown">
+									Actions <i class="fa fa-angle-down"></i>
+								</button>
+								<ul class="dropdown-menu pull-right" role="menu">
+									<li><a href="#"> <i class="icon-bell"></i> Action
+									</a></li>
+									<li><a href="#"> <i class="icon-shield"></i> Another
+											action
+									</a></li>
+									<li><a href="#"> <i class="icon-user"></i> Something
+											else here
+									</a></li>
+									<li class="divider"></li>
+									<li><a href="#"> <i class="icon-bag"></i> Separated
+											link
+									</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- END PAGE BAR -->
+					<!-- BEGIN PAGE TITLE-->
+					<h3 class="page-title">
+						Assign Members To Roles <small> Select users/members to assign to a selected role.</small>
+					</h3>
+					<!-- END PAGE TITLE-->
+					<!-- END PAGE HEADER-->
+					 <div class="row">
+                        <div class="col-md-8">
+                            <div class="portlet light form-fit bordered">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <i class="icon-social-dribbble font-green"></i>
+                                        <span class="caption-subject font-green bold uppercase">Assign Members Form</span>
+                                    </div>
+                                    <div class="actions">
+                                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                                            <i class="icon-cloud-upload"></i>
+                                        </a>
+                                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                                            <i class="icon-wrench"></i>
+                                        </a>
+                                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                                            <i class="icon-trash"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="portlet-body form">
+                                    <!-- BEGIN FORM-->
+                                    <h:form id="frmRole"  class="form-horizontal form-row-seperated">
+                                    <div class="form-body">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3">Select Role</label>
+                                                <div class="col-md-9">  
+                                           <h:selectOneListbox class="bs-select form-control" data-show-subtext="true"
+                                           value="#{roleModel.id}" onchange="submit()" 
+                                           valueChangeListener="#{roleBean.selectRoleChangeMethod}">
+												<f:selectItem itemValue="#{null}"
+														itemLabel="-- Choose A Role --" />
+													<f:selectItems value="#{roleBean.roles}" var="ro" 
+														itemValue="#{ro.id}" itemLabel="#{ro.roleName} (#{ro.permission})" />
+											</h:selectOneListbox>
+											
+											
+										</div>
+                                            </div> 
+                                        </div>
+                                        <div class="form-body">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3">Assign Member(s):</label>
+                                                <div class="col-md-9"> 
+											<h:selectManyListbox  multiple="multiple"   immediate="true"  name="my_multi_select1[]" 
+											styleClass="multi-select my_multi_select1" value="#{roleBean.selectedUsersInRole}">
+											
+												<f:selectItems value="#{roleBean.existingUsers}" var="y"
+													itemValue="#{y.id}" itemLabel="#{y.firstName} #{y.lastName}" />
+											</h:selectManyListbox >
+											
+										</div>
+                                            </div> 
+                                        </div>
+                                        <div class="form-actions">
+                                            <div class="row">
+                                                <div class="col-md-offset-3 col-md-9">   
+                                                    <h:commandButton value="Save &amp; Add User(s)"
+										styleClass="btn green"
+										action="#{roleBean.assignMembers}" />  
+										<button type="button" class="btn grey-salsa btn-outline">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </h:form>
+                                    <!-- END FORM-->
+                                </div>
+                            </div>
+                            <!-- END PORTLET-->
+                        </div>
+                        <div class="col-md-4">
+					<!-- BEGIN SAMPLE TABLE PORTLET-->
+					<div class="portlet box yellow">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-archive"></i>List of Roles
+							</div>
+							<div class="tools">
+								<a href="javascript:;" class="collapse"> </a> <a
+									href="#portlet-config" data-toggle="modal" class="config">
+								</a> <a href="javascript:;" class="reload"> </a> <a
+									href="javascript:;" class="remove"> </a>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="table-scrollable">
+								<table class="table table-bordered table-hover">
+									<thead>
+										<tr>
+											<th>Role Name</th>
+											<th>Role Description</th>
+										</tr>
+									</thead>
+									<tbody>
+									<ui:repeat var="r" value="#{roleBean.roleList}" varStatus="status">
+										<tr>
+											<td class="success">#{r.roleName}</td>
+											<td class="warning">#{r.roleDescription}</td>
+										</tr> 
+									</ui:repeat>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- END SAMPLE TABLE PORTLET-->
+				</div>
+                    </div>
+				</div>
+				<!-- END CONTENT BODY -->
+	</ui:define> 
+		<ui:define name="morejs">
+		<h:outputScript library="assets" name="global/plugins/bootstrap-select/js/bootstrap-select.min.js" />  
+		<h:outputScript library="assets"
+			name="global/plugins/jquery-multi-select/js/jquery.multi-select.js" />
+		<h:outputScript library="assets"
+			name="global/plugins/select2/js/select2.full.min.js" />	
+	<h:outputScript library="assets"
+			name="pages/scripts/components-multi-select.min.js" />	   
+
+	</ui:define>
+</ui:composition>
+</html>

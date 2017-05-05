@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/WEB-INF/template/default_layout.xhtml">
+	<ui:define name="morecss">
+		<h:outputStylesheet library="assets"
+			name="global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" />
+	</ui:define>
+	<ui:define name="content"> 
+		<!-- BEGIN CONTENT BODY -->
+		<div class="page-content">
+			<!-- BEGIN PAGE HEADER-->
+			<!-- BEGIN THEME PANEL -->
+			<ui:include src="/WEB-INF/template/uisetting.xhtml" />
+			<!-- END THEME PANEL -->
+			<!-- BEGIN PAGE BAR -->
+			<div class="page-bar">
+				<ul class="page-breadcrumb">
+					<li><a href="index.html">Home</a> <i class="fa fa-circle"></i>
+					</li>
+					<li><span>Horizontal Menu</span></li>
+				</ul>
+				<div class="page-toolbar">
+					<div class="btn-group pull-right">
+						<button type="button"
+							class="btn green btn-sm btn-outline dropdown-toggle"
+							data-toggle="dropdown">
+							Actions <i class="fa fa-angle-down"></i>
+						</button>
+						<ul class="dropdown-menu pull-right" role="menu">
+							<li><a href="#"> <i class="icon-bell"></i> Action
+							</a></li>
+							<li><a href="#"> <i class="icon-shield"></i> Another
+									action
+							</a></li>
+							<li><a href="#"> <i class="icon-user"></i> Something
+									else here
+							</a></li>
+							<li class="divider"></li>
+							<li><a href="#"> <i class="icon-bag"></i> Separated link
+							</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- END PAGE BAR -->
+			<!-- BEGIN PAGE TITLE-->
+			<h3 class="page-title">
+				User Profile <small>You are currently viewing a selected
+					user profile.</small>
+			</h3>
+			<!-- END PAGE TITLE-->
+			<!-- END PAGE HEADER-->
+			<div class="profile">
+				<div class="row profile-account">
+					<div class="col-md-3">
+						<ul class="ver-inline-menu tabbable margin-bottom-10">
+							<li class="active"><a data-toggle="tab" href="#tab_1-1">
+									<i class="fa fa-user"></i> User info
+							</a> <span class="after"> </span></li>
+							<li><a data-toggle="tab" href="#tab_2-2"> <i
+									class="fa fa-users"></i> Assigned Roles
+							</a></li>
+							<li><a data-toggle="tab" href="#tab_3-3"> <i
+									class="fa fa-cog"></i> Other Settings
+							</a></li>
+						</ul>
+					</div>
+					<div class="col-md-9">
+						<div class="tab-content">
+							<div id="tab_1-1" class="tab-pane active"> 
+								<div class="portlet box green">
+									<div class="portlet-title">
+										<div class="caption">
+											<i class="fa fa-gift"></i>View User
+										</div>
+										<div class="tools">
+											<a href="javascript:;" class="collapse"> </a> <a
+												href="#portlet-config" data-toggle="modal" class="config">
+											</a> <a href="javascript:;" class="reload"> </a> <a
+												href="javascript:;" class="remove"> </a>
+										</div>
+									</div>
+									<div class="portlet-body form">
+										<!-- BEGIN FORM--> 
+											<div class="form-body">
+												<h2 class="margin-bottom-20">Currently Viewing -
+													#{userModel.firstName} #{userModel.lastName}</h2>
+												<h3 class="form-section">Person Info</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="control-label col-md-3">First Name:</label>
+															<div class="col-md-9">
+																<p class="form-control-static">#{userModel.firstName}</p>
+															</div>
+														</div>
+													</div>
+													<!--/span-->
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="control-label col-md-3">Last Name:</label>
+															<div class="col-md-9">
+																<p class="form-control-static">#{userModel.lastName}</p>
+															</div>
+														</div>
+													</div>
+													<!--/span-->
+												</div>
+												<!--/row-->
+												<div class="row">
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="control-label col-md-3">Email
+																Addresss:</label>
+															<div class="col-md-9">
+																<p class="form-control-static">#{userModel.email}</p>
+															</div>
+														</div>
+													</div>
+													<!--/span-->
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="control-label col-md-3">Phone:</label>
+															<div class="col-md-9">
+																<p class="form-control-static">#{userModel.phone}</p>
+															</div>
+														</div>
+													</div>
+													<!--/span-->
+												</div>
+												<!--/row-->
+												<div class="row">
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="control-label col-md-3">Status:</label>
+															<div class="col-md-9">
+																<p class="form-control-static">
+																	<h:panelGroup rendered="#{userModel.isEnabled == true}">
+																		<label
+																			class="btn green btn-outline btn-circle btn-sm active">Enabled</label>
+																	</h:panelGroup>
+																	<h:panelGroup rendered="#{userModel.isEnabled == false}">
+																		<label class="btn red btn-outline btn-circle btn-sm">Disabled</label>
+																	</h:panelGroup>
+																</p>
+															</div>
+														</div>
+													</div>
+													<!--/span-->
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="control-label col-md-3">Remark:</label>
+															<div class="col-md-9">
+																<p class="form-control-static">#{userModel.remark}</p>
+															</div>
+														</div>
+													</div>
+													<!--/span-->
+												</div>
+
+
+												<!--/row-->
+												<h3 class="form-section">Creation Information</h3>
+
+												<div class="row">
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="control-label col-md-3">Last Login:</label>
+															<div class="col-md-9">
+																<p class="form-control-static">#{userModel.lastLogin}</p>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="control-label col-md-3">Created By:</label>
+															<div class="col-md-9">
+																<p class="form-control-static">#{userModel.createdBy}</p>
+															</div>
+														</div>
+													</div>
+													<!--/span-->
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="control-label col-md-3">Created
+																Date:</label>
+															<div class="col-md-9">
+																<p class="form-control-static">#{userModel.createdDate}</p>
+															</div>
+														</div>
+													</div>
+													<!--/span-->
+												</div>
+												<!--/row-->
+												<div class="row">
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="control-label col-md-3">Modified
+																By:</label>
+															<div class="col-md-9">
+																<p class="form-control-static">#{userModel.modifiedBy}</p>
+															</div>
+														</div>
+													</div>
+													<!--/span-->
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="control-label col-md-3">Modified
+																Date:</label>
+															<div class="col-md-9">
+																<p class="form-control-static">#{userModel.modifiedDate}</p>
+															</div>
+														</div>
+													</div>
+													<!--/span-->
+												</div>
+											</div>
+											<div class="form-actions">
+												<div class="row">
+													<div class="col-md-6">
+														<div class="row">
+															<div class="col-md-offset-3 col-md-9">
+															 <h:form>
+															 <ui:param name="userId" value="#{userModel.id}" />
+																<h:commandButton styleClass="btn  blue"
+																style="font-family:'FontAwesome',Arial;" value="Update User &#xf044;"
+																action="#{userBean.editUser(userId)}">
+																</h:commandButton> &nbsp; 
+																<h:link  styleClass="btn  default" value="Back" outcome="manage-users" />
+																</h:form>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-6"></div>
+												</div>
+											</div>
+										
+										<!-- END FORM-->
+									</div>
+								</div>
+							</div>
+							<div id="tab_2-2" class="tab-pane">
+
+								<div class="mt-element-list">
+									<div class="mt-list-head list-default ext-1 yellow-saffron">
+										<div class="row">
+											<div class="col-xs-8">
+												<div class="list-head-title-container">
+													<h3 class="list-title uppercase sbold">Currently Roles
+														Assigned</h3>
+													<div class="list-date">#{userModel.email}</div>
+												</div>
+											</div>
+											<div class="col-xs-4">
+												<div class="list-head-summary-container">
+													<div class="list-pending">
+														<div class="list-count badge badge-default ">#{roleBean.countRolesAssigned(userModel.email)}</div>
+														<div class="list-label">Assigned</div>
+													</div>
+													<div class="list-done">
+														<div class="list-count badge badge-default last">#{roleBean.countRoleUnAssigned(userModel.email)}</div>
+														<div class="list-label">Un-Assigned</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="mt-list-container list-default ext-1">
+										<div class="mt-list-title uppercase">
+											Roles List <span
+												class="badge badge-default pull-right bg-hover-green-jungle">
+												<a class="font-white" href="javascript:;"> <i
+													class="fa fa-plus"></i>
+											</a>
+											</span>
+										</div>
+
+										<ui:repeat var="r" value="#{roleBean.roleList}"
+											varStatus="status">
+											<ul>
+												<li class="mt-list-item">
+
+													<div class="list-datetime">
+
+														<ui:param name="email" value="#{userModel.email}" />
+														<ui:param name="rolePermissionId" value="#{r.id}" />
+														<h:panelGroup
+															rendered="#{roleBean.isRoleAssignedToUser(email, rolePermissionId) == true}">
+															<a href="javascript:;" class="btn btn-icon-only green"><i
+																class="fa fa-check"></i></a>
+														</h:panelGroup>
+														<h:panelGroup
+															rendered="#{roleBean.isRoleAssignedToUser(email, rolePermissionId) == false}">
+															<a href="javascript:;" class="btn btn-icon-only red"><i
+																class="fa fa-minus-circle"></i></a>
+														</h:panelGroup>
+													</div>
+													<div class="list-item-content">
+														<h3 class="uppercase">
+															<a href="javascript:;">#{r.roleName}</a>
+														</h3>
+														<p>#{r.roleDescription}</p>
+													</div>
+												</li>
+											</ul>
+										</ui:repeat>
+
+									</div>
+								</div>
+
+
+
+							</div>
+						</div>
+					</div>
+					<!--end col-md-9-->
+				</div>
+			</div>
+		</div>
+		<!-- END CONTENT BODY --> 
+	</ui:define>
+	<ui:define name="morejs">
+
+
+		<h:outputScript library="assets"
+			name="global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" />
+		<h:outputScript library="assets"
+			name="pages/scripts/components-bootstrap-switch.min.js" />
+	</ui:define>
+</ui:composition>
+</html>

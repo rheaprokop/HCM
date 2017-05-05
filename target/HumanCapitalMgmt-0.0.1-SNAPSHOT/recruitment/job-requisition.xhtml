@@ -1,0 +1,1074 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="/WEB-INF/template/default_layout.xhtml">
+
+	<ui:define name="morecss">
+		<h:outputStylesheet library="assets"
+			name="global/plugins/bootstrap-daterangepicker/daterangepicker.min.css" />
+		<h:outputStylesheet library="assets"
+			name="global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
+		<h:outputStylesheet library="assets"
+			name="global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css" />
+		<h:outputStylesheet library="assets"
+			name="global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" />
+		<h:outputStylesheet library="assets"
+			name="global/plugins/datatables/datatables.min.css" />
+		<h:outputStylesheet library="assets"
+			name="global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css" />
+		<h:outputStylesheet library="assets"
+			name="global/plugins/jquery-file-upload/css/jquery.fileupload.css" />
+		<h:outputStylesheet library="assets"
+			name="global/global/plugins/jquery-file-upload/css/jquery.fileupload-ui.css" />
+
+
+	</ui:define>
+	<ui:define name="content">
+		<!-- BEGIN CONTENT BODY -->
+		<div class="page-content">
+			<!-- BEGIN PAGE HEADER-->
+			<!-- BEGIN THEME PANEL -->
+			<ui:include src="/WEB-INF/template/uisetting.xhtml" />
+			<!-- END THEME PANEL -->
+			<!-- BEGIN PAGE BAR -->
+			<div class="page-bar">
+				<ul class="page-breadcrumb">
+					<li><a href="index.html">Home</a> <i class="fa fa-circle"></i>
+					</li>
+					<li><span>Create A Job Requisition</span></li>
+				</ul>
+				<div class="page-toolbar">
+					<div class="btn-group pull-right">
+						<button type="button"
+							class="btn green btn-sm btn-outline dropdown-toggle"
+							data-toggle="dropdown">
+							Actions <i class="fa fa-angle-down"></i>
+						</button>
+						<ul class="dropdown-menu pull-right" role="menu">
+							<li><a href="#"> <i class="icon-bell"></i> Action
+							</a></li>
+							<li><a href="#"> <i class="icon-shield"></i> Another
+									action
+							</a></li>
+							<li><a href="#"> <i class="icon-user"></i> Something
+									else here
+							</a></li>
+							<li class="divider"></li>
+							<li><a href="#"> <i class="icon-bag"></i> Separated link
+							</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- END PAGE BAR -->
+			<!-- BEGIN PAGE TITLE-->
+			<h3 class="page-title">
+				<small>Create Job Information.</small>
+			</h3>
+			<!-- END PAGE TITLE-->
+			<!-- END PAGE HEADER-->
+
+			<div class="row">
+				<div class="col-md-8">
+					<div class="portlet light bordered">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="icon-bubble font-green-sharp"></i> <span
+									class="caption-subject font-green-sharp bold uppercase">Basic
+									Job Information</span>
+							</div>
+							<div class="actions">
+								<div class="btn-group">
+									<a class="btn green-haze btn-outline btn-circle btn-sm"
+										href="javascript:;" data-toggle="dropdown"
+										data-hover="dropdown" data-close-others="true"> Actions <i
+										class="fa fa-angle-down"></i>
+									</a>
+									<ul class="dropdown-menu pull-right">
+										<li><a href="javascript:;"> Option 1</a></li>
+										<li class="divider"></li>
+										<li><a href="javascript:;">Option 2</a></li>
+										<li><a href="javascript:;">Option 3</a></li>
+										<li><a href="javascript:;">Option 4</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<ul class="nav nav-pills">
+								<li class="active"><a href="#tab_2_1" data-toggle="tab">
+										Basic Job Information</a></li>
+								<li><a href="#tab_2_2" data-toggle="tab"> Key
+										Responsibilities </a></li>
+								<li><a href="#tab_2_3" data-toggle="tab"> Key Qualification </a></li>
+								<li><a href="#tab_2_4" data-toggle="tab"> Compensation </a></li>
+								<li><a href="#tab_2_5" data-toggle="tab"> Other Questions </a></li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane fade active in" id="tab_2_1">
+									<div class="row">
+										<div class="col-md-12 ">
+											<!-- BEGIN SAMPLE FORM PORTLET-->
+											<div class="portlet light bordered">
+												<div class="portlet-title">
+													<div class="caption font-red-sunglo">
+														<span class="caption-subject bold uppercase">Job
+															Requisition Form Form</span>
+													</div>
+													<div class="actions">
+														<a class="btn btn-circle btn-icon-only blue"
+															href="javascript:;"> <i class="icon-cloud-upload"></i>
+														</a> <a class="btn btn-circle btn-icon-only green"
+															href="javascript:;"> <i class="icon-wrench"></i>
+														</a> <a class="btn btn-circle btn-icon-only red"
+															href="javascript:;"> <i class="icon-trash"></i>
+														</a> <a
+															class="btn btn-circle btn-icon-only btn-default fullscreen"
+															href="javascript:;" data-original-title="" title="">
+														</a>
+													</div>
+												</div>
+												<div class="portlet-body form">
+													<h:form role="form">
+														<div class="form-body">
+															<div class="row">
+																<div class="col-md-6">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<input type="text" class="form-control"
+																			id="form_control_1"></input> <label
+																			for="form_control_1">Job Title</label>
+																	</div>
+																</div>
+																<div class="col-md-6">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<input type="text" class="form-control"
+																			id="form_control_1"></input> <label
+																			for="form_control_1">Request Date</label>
+																	</div>
+																</div>
+																
+															</div>
+															<div
+																class="form-group form-md-line-input form-md-floating-label">
+																<textarea class="form-control" rows="3"></textarea>
+																<label for="form_control_1">Job Description</label>
+															</div>
+															<div class="row">
+																<div class="col-md-4">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<input type="text" class="form-control"
+																			id="form_control_1"></input> <label
+																			for="form_control_1">No. of Position(s)</label> <span
+																			class="help-block">Some help goes here...</span>
+																	</div>
+																</div>
+																<div class="col-md-4">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<input type="text" class="form-control"
+																			id="form_control_1"></input> <label
+																			for="form_control_1">Reporting To</label> <span
+																			class="help-block">Some help goes here...</span>
+																	</div>
+																</div>
+																<div class="col-md-4">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<input type="text" class="form-control"
+																			id="form_control_1"></input> <label
+																			for="form_control_1">Department</label> <span
+																			class="help-block">Some help goes here...</span>
+																	</div>
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-md-4">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<input type="text" class="form-control"
+																			id="form_control_1"></input> <label
+																			for="form_control_1">Location of Work</label> <span
+																			class="help-block">Some help goes here...</span>
+																	</div>
+																</div>
+																<div class="col-md-4">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<input type="text" class="form-control"
+																			id="form_control_1"></input> <label
+																			for="form_control_1">Start Date Requirement</label> <span
+																			class="help-block">Some help goes here...</span>
+																	</div>
+																</div>
+																<div class="col-md-4">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<input type="text" class="form-control"
+																			id="form_control_1"></input> <label
+																			for="form_control_1">Requested by</label> <span
+																			class="help-block">Some help goes here...</span>
+																	</div>
+																</div>
+															</div>
+															<h3 class="form-section">Basic Preference</h3>
+															<div class="row">
+																<div class="col-md-4">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<select class="form-control" id="form_control_1">
+																			<option value=""></option>
+																			<option value="1">Option 1</option>
+																			<option value="2">Option 2</option>
+																			<option value="3">Option 3</option>
+																			<option value="4">Option 4</option>
+																		</select> <label for="form_control_1">Gender</label> <span
+																			class="help-block">Some help goes here...</span>
+																	</div>
+																</div>
+																<div class="col-md-4">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<select class="form-control" id="form_control_1">
+																			<option value=""></option>
+																			<option value="1">Option 1</option>
+																			<option value="2">Option 2</option>
+																			<option value="3">Option 3</option>
+																			<option value="4">Option 4</option>
+																		</select> <label for="form_control_1">From Age</label> <span
+																			class="help-block">Some help goes here...</span>
+																	</div>
+																</div>
+																<div class="col-md-4">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<select class="form-control" id="form_control_1">
+																			<option value=""></option>
+																			<option value="1">Option 1</option>
+																			<option value="2">Option 2</option>
+																			<option value="3">Option 3</option>
+																			<option value="4">Option 4</option>
+																		</select> <label for="form_control_1">To Age</label> <span
+																			class="help-block">Some help goes here...</span>
+																	</div>
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-md-6">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<select class="form-control" id="form_control_1">
+																			<option value=""></option>
+																			<option value="1">Replacement</option>
+																			<option value="2">New Position</option>
+																			<option value="3">Option 3</option>
+																			<option value="4">Option 4</option>
+																		</select> <label for="form_control_1">Required for</label> <span
+																			class="help-block">Some help goes here...</span>
+																	</div>
+																</div>
+
+																<div class="col-md-6">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<input type="text" class="form-control"
+																			id="form_control_1"></input> <label
+																			for="form_control_1">If Replacement, enter
+																			previous employee ID</label> <span class="help-block">Some
+																			help goes here...</span>
+																	</div>
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-md-4">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<select class="form-control" id="form_control_1">
+																			<option value=""></option>
+																			<option value="1">Full Time</option>
+																			<option value="2">Part Time</option>
+																			<option value="3">Option 3</option>
+																			<option value="4">Option 4</option>
+																		</select> <label for="form_control_1">Job Type</label> <span
+																			class="help-block">Some help goes here...</span>
+																	</div>
+																</div>
+																<div class="col-md-4">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<select class="form-control" id="form_control_1">
+																			<option value=""></option>
+																			<option value="1">Option 1</option>
+																			<option value="2">Option 2</option>
+																			<option value="3">Option 3</option>
+																			<option value="4">Option 4</option>
+																		</select> <label for="form_control_1">Work Hours From</label> <span
+																			class="help-block">Some help goes here...</span>
+																	</div>
+																</div>
+																<div class="col-md-4">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<select class="form-control" id="form_control_1">
+																			<option value=""></option>
+																			<option value="1">Option 1</option>
+																			<option value="2">Option 2</option>
+																			<option value="3">Option 3</option>
+																			<option value="4">Option 4</option>
+																		</select> <label for="form_control_1">Work Hours To</label> <span
+																			class="help-block">Some help goes here...</span>
+																	</div>
+																</div>
+															</div>
+															<div class="form-group form-md-checkboxes">
+																<label>Days That are Applied</label>
+																<div class="md-checkbox-inline">
+																	<div class="md-checkbox">
+																		<input type="checkbox" id="checkbox6" class="md-check"></input>
+																		<label for="checkbox6"> <span></span> <span
+																			class="check"></span> <span class="box"></span>
+																			Monday
+																		</label>
+																	</div>
+																	<div class="md-checkbox">
+																		<input type="checkbox" id="checkbox7" class="md-check"></input>
+																		<label for="checkbox7"> <span></span> <span
+																			class="check"></span> <span class="box"></span>
+																			Tuesday
+																		</label>
+																	</div>
+																	<div class="md-checkbox">
+																		<input type="checkbox" id="checkbox8" class="md-check"></input>
+																		<label for="checkbox8"> <span></span> <span
+																			class="check"></span> <span class="box"></span>Wednesday
+																		</label>
+																	</div>
+																	<div class="md-checkbox">
+																		<input type="checkbox" id="checkbox8" class="md-check"></input>
+																		<label for="checkbox8"> <span></span> <span
+																			class="check"></span> <span class="box"></span>Thursday
+																		</label>
+																	</div>
+																</div>
+															</div>
+															  
+														</div>
+													</h:form>
+												</div>
+											</div>
+											<!-- END SAMPLE FORM PORTLET-->
+										</div>
+
+									</div>
+								</div>
+								<div class="tab-pane fade" id="tab_2_2">
+									<!-- BEGIN SAMPLE TABLE PORTLET-->
+									<div class="portlet">
+										<div class="portlet-title">
+											<div class="caption">
+												<i class="fa fa-shopping-cart"></i>Responsibilities List
+											</div>
+											<div class="tools">
+												<a href="javascript:;" class="collapse"> </a> <a
+													href="#portlet-config" data-toggle="modal" class="config">
+												</a> <a href="javascript:;" class="reload"> </a> <a
+													href="javascript:;" class="remove"> </a>
+											</div>
+										</div>
+										<div class="portlet-body">
+											<div class="table-scrollable">
+												<table
+													class="table table-striped table-bordered table-advance table-hover">
+													<thead>
+														<tr> 
+															<th class="hidden-xs"><i class="fa fa-question"></i>
+																Education Level</th> 
+														</tr>
+													</thead>
+													<tbody>
+														<tr> 
+															<td class="hidden-xs">Server hardware purchase</td> 
+														</tr>
+														<tr> 
+															<td class="hidden-xs">Server hardware purchase</td> 
+														</tr>
+														<tr> 
+															<td class="hidden-xs">Server hardware purchase</td> 
+														</tr> 
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<!-- END SAMPLE TABLE PORTLET-->
+									<div class="row">
+										<div class="col-md-10 ">
+											<!-- BEGIN SAMPLE FORM PORTLET-->
+											<div class="portlet light bordered">
+												<div class="portlet-title">
+													<div class="caption font-red-sunglo">
+														<span class="caption-subject bold uppercase">Add
+															Responsibility Form</span>
+													</div>
+													<div class="actions">
+														<a class="btn btn-circle btn-icon-only blue"
+															href="javascript:;"> <i class="icon-cloud-upload"></i>
+														</a> <a class="btn btn-circle btn-icon-only green"
+															href="javascript:;"> <i class="icon-wrench"></i>
+														</a> <a class="btn btn-circle btn-icon-only red"
+															href="javascript:;"> <i class="icon-trash"></i>
+														</a> <a
+															class="btn btn-circle btn-icon-only btn-default fullscreen"
+															href="javascript:;" data-original-title="" title="">
+														</a>
+													</div>
+												</div>
+												<div class="portlet-body form">
+													<h:form role="form">
+														<div class="form-body">  
+															<div
+																class="form-group form-md-line-input form-md-floating-label">
+																<div class="input-group">
+																	<div class="input-group-control">
+																		<textarea class="form-control" rows="3"></textarea>
+																		<label for="form_control_1">Add Additional Responsibility</label>
+																	</div>
+																	<span class="input-group-btn btn-right">
+																		<button type="button" class="btn green-haze"
+																			aria-expanded="false">
+																			Add Another <i class="fa fa-globe"></i>
+																		</button>
+
+																	</span>
+																</div>
+															</div>
+														</div>
+													</h:form>
+												</div>
+											</div>
+											<!-- END SAMPLE FORM PORTLET-->
+										</div>
+									</div> 
+									 
+								</div>
+								<div class="tab-pane fade" id="tab_2_3">
+									<!-- BEGIN SAMPLE TABLE PORTLET-->
+									<div class="portlet">
+										<div class="portlet-title">
+											<div class="caption">
+												<i class="fa fa-shopping-cart"></i>Qualification List
+											</div>
+											<div class="tools">
+												<a href="javascript:;" class="collapse"> </a> <a
+													href="#portlet-config" data-toggle="modal" class="config">
+												</a> <a href="javascript:;" class="reload"> </a> <a
+													href="javascript:;" class="remove"> </a>
+											</div>
+										</div>
+										<div class="portlet-body">
+											<div class="table-scrollable">
+												<table
+													class="table table-striped table-bordered table-advance table-hover">
+													<thead>
+														<tr> 
+															<th class="hidden-xs"><i class="fa fa-question"></i>
+																Education Level</th> 
+														</tr>
+													</thead>
+													<tbody>
+														<tr> 
+															<td class="hidden-xs">Server hardware purchase</td> 
+														</tr>
+														<tr> 
+															<td class="hidden-xs">Server hardware purchase</td> 
+														</tr>
+														<tr> 
+															<td class="hidden-xs">Server hardware purchase</td> 
+														</tr> 
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<!-- END SAMPLE TABLE PORTLET-->
+									<div class="row">
+										<div class="col-md-10 ">
+											<!-- BEGIN SAMPLE FORM PORTLET-->
+											<div class="portlet light bordered">
+												<div class="portlet-title">
+													<div class="caption font-red-sunglo">
+														<span class="caption-subject bold uppercase">Add
+															Responsibility Form</span>
+													</div>
+													<div class="actions">
+														<a class="btn btn-circle btn-icon-only blue"
+															href="javascript:;"> <i class="icon-cloud-upload"></i>
+														</a> <a class="btn btn-circle btn-icon-only green"
+															href="javascript:;"> <i class="icon-wrench"></i>
+														</a> <a class="btn btn-circle btn-icon-only red"
+															href="javascript:;"> <i class="icon-trash"></i>
+														</a> <a
+															class="btn btn-circle btn-icon-only btn-default fullscreen"
+															href="javascript:;" data-original-title="" title="">
+														</a>
+													</div>
+												</div>
+												<div class="portlet-body form">
+													<h:form role="form">
+														<div class="form-body">  
+															<div
+																class="form-group form-md-line-input form-md-floating-label">
+																<div class="input-group">
+																	<div class="input-group-control">
+																		<textarea class="form-control" rows="3"></textarea>
+																		<label for="form_control_1">Add Additional Responsibility</label>
+																	</div>
+																	<span class="input-group-btn btn-right">
+																		<button type="button" class="btn green-haze"
+																			aria-expanded="false">
+																			Add Another <i class="fa fa-globe"></i>
+																		</button>
+
+																	</span>
+																</div>
+															</div>
+														</div>
+													</h:form>
+												</div>
+											</div>
+											<!-- END SAMPLE FORM PORTLET-->
+										</div>
+									</div> 
+									 
+								</div>
+								<div class="tab-pane fade" id="tab_2_4">
+									<!-- BEGIN SAMPLE TABLE PORTLET-->
+									<div class="portlet">
+										<div class="portlet-title">
+											<div class="caption">
+												<i class="fa fa-shopping-cart"></i>Salary Information
+											</div>
+											<div class="tools">
+												<a href="javascript:;" class="collapse"> </a> <a
+													href="#portlet-config" data-toggle="modal" class="config">
+												</a> <a href="javascript:;" class="reload"> </a> <a
+													href="javascript:;" class="remove"> </a>
+											</div>
+										</div>
+										<div class="row">
+										<div class="col-md-12 ">
+											<!-- BEGIN SAMPLE FORM PORTLET-->
+											<div class="portlet light bordered">
+												<div class="portlet-title">
+													<div class="caption font-red-sunglo">
+														<span class="caption-subject bold uppercase">Add
+															A Compensation Form</span>
+													</div>
+													<div class="actions">
+														<a class="btn btn-circle btn-icon-only blue"
+															href="javascript:;"> <i class="icon-cloud-upload"></i>
+														</a> <a class="btn btn-circle btn-icon-only green"
+															href="javascript:;"> <i class="icon-wrench"></i>
+														</a> <a class="btn btn-circle btn-icon-only red"
+															href="javascript:;"> <i class="icon-trash"></i>
+														</a> <a
+															class="btn btn-circle btn-icon-only btn-default fullscreen"
+															href="javascript:;" data-original-title="" title="">
+														</a>
+													</div>
+												</div>
+												<div class="portlet-body form">
+													<h:form role="form">
+														<div class="form-body">
+															<div class="row">
+																<div class="col-md-6">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<select class="form-control" id="form_control_1">
+																			<option value=""></option>
+																			<option value="1">Option 1</option>
+																			<option value="2">Option 2</option>
+																			<option value="3">Option 3</option>
+																			<option value="4">Option 4</option>
+																		</select> <label for="form_control_1">Salary Range From</label> <span
+																			class="help-block">Some help goes here...</span>
+																	</div>
+																</div>
+																<div class="col-md-6">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<select class="form-control" id="form_control_1">
+																			<option value=""></option>
+																			<option value="1">Option 1</option>
+																			<option value="2">Option 2</option>
+																			<option value="3">Option 3</option>
+																			<option value="4">Option 4</option>
+																		</select> <label for="form_control_1">Salary Range To</label> <span
+																			class="help-block">Some help goes here...</span>
+																	</div>
+																</div>
+															</div> 
+														</div>
+													</h:form>
+												</div>
+											</div>
+											<!-- END SAMPLE FORM PORTLET-->
+										</div>
+									</div>
+										<div class="portlet-body">
+											<div class="table-scrollable">
+												<table
+													class="table table-striped table-bordered table-advance table-hover">
+													<thead>
+														<tr>
+															<th><i class="fa fa-briefcase"></i> Description</th>
+															<th class="hidden-xs"><i class="fa fa-question"></i>
+																Amount</th>
+															<th><i class="fa fa-bookmark"></i> Location</th>
+															<th><i class="fa fa-bookmark"></i> From - To</th>
+															<th></th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td><a href="javascript:;"> Pixel Ltd </a></td>
+															<td class="hidden-xs">Server hardware purchase</td>
+															<td>52560.10$ <span
+																class="label label-sm label-success label-mini">
+																	Paid </span>
+															</td>
+															<td>52560.10$ <span
+																class="label label-sm label-success label-mini">
+																	Paid </span>
+															</td>
+															<td><a href="javascript:;"
+																class="btn dark btn-sm btn-outline sbold uppercase">
+																	<i class="fa fa-share"></i> View
+															</a></td>
+														</tr>
+														<tr>
+															<td><a href="javascript:;"> Pixel Ltd </a></td>
+															<td class="hidden-xs">Server hardware purchase</td>
+															<td>52560.10$ <span
+																class="label label-sm label-success label-mini">
+																	Paid </span>
+															</td>
+															<td>52560.10$ <span
+																class="label label-sm label-success label-mini">
+																	Paid </span>
+															</td>
+															<td><a href="javascript:;"
+																class="btn dark btn-sm btn-outline sbold uppercase">
+																	<i class="fa fa-share"></i> View
+															</a></td>
+														</tr>
+														<tr>
+															<td><a href="javascript:;"> Pixel Ltd </a></td>
+															<td class="hidden-xs">Server hardware purchase</td>
+															<td>52560.10$ <span
+																class="label label-sm label-success label-mini">
+																	Paid </span>
+															</td>
+															<td>52560.10$ <span
+																class="label label-sm label-success label-mini">
+																	Paid </span>
+															</td>
+															<td><a href="javascript:;"
+																class="btn dark btn-sm btn-outline sbold uppercase">
+																	<i class="fa fa-share"></i> View
+															</a></td>
+														</tr>
+														<tr>
+															<td><a href="javascript:;"> Pixel Ltd </a></td>
+															<td class="hidden-xs">Server hardware purchase</td>
+															<td>52560.10$ <span
+																class="label label-sm label-success label-mini">
+																	Paid </span>
+															</td>
+															<td>52560.10$ <span
+																class="label label-sm label-success label-mini">
+																	Paid </span>
+															</td>
+															<td><a href="javascript:;"
+																class="btn dark btn-sm btn-outline sbold uppercase">
+																	<i class="fa fa-share"></i> View
+															</a></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<!-- END SAMPLE TABLE PORTLET-->
+									<div class="row">
+										<div class="col-md-12 ">
+											<!-- BEGIN SAMPLE FORM PORTLET-->
+											<div class="portlet light bordered">
+												<div class="portlet-title">
+													<div class="caption font-red-sunglo">
+														<span class="caption-subject bold uppercase">Add
+															A Benefit Form</span>
+													</div>
+													<div class="actions">
+														<a class="btn btn-circle btn-icon-only blue"
+															href="javascript:;"> <i class="icon-cloud-upload"></i>
+														</a> <a class="btn btn-circle btn-icon-only green"
+															href="javascript:;"> <i class="icon-wrench"></i>
+														</a> <a class="btn btn-circle btn-icon-only red"
+															href="javascript:;"> <i class="icon-trash"></i>
+														</a> <a
+															class="btn btn-circle btn-icon-only btn-default fullscreen"
+															href="javascript:;" data-original-title="" title="">
+														</a>
+													</div>
+												</div>
+												<div class="portlet-body form">
+													<h:form role="form">
+														<div class="form-body">
+															<div class="row">
+																<div class="col-md-6">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<input type="text" class="form-control"
+																			id="form_control_1"></input> <label
+																			for="form_control_1">Employer Name</label>
+																	</div>
+																</div>
+																<div class="col-md-6">
+																	<div
+																		class="form-group form-md-line-input  form-md-floating-label">
+																		<input type="text" class="form-control"
+																			id="form_control_1"></input> <label
+																			for="form_control_1">Job Position</label>
+																	</div>
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-md-6">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<input type="text" class="form-control"
+																			id="form_control_1"></input> <label
+																			for="form_control_1">Employer Address</label>
+																	</div>
+																</div>
+																<div class="col-md-6">
+																	<div
+																		class="form-group form-md-line-input  form-md-floating-label">
+																		<select class="form-control" id="form_control_1">
+																			<option value=""></option>
+																			<option value="1">Option 1</option>
+																			<option value="2">Option 2</option>
+																			<option value="3">Option 3</option>
+																			<option value="4">Option 4</option>
+																		</select> <label for="form_control_1">Country</label>
+																	</div>
+																</div>
+															</div>
+															<div class="row">
+																<div class="col-md-4">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<div class="input-group date form_datetime">
+																			<div class="input-group-control">
+																				<input type="text" class="form-control"
+																					readonly="true"></input> <label
+																					for="form_control_1">Start Date</label>
+																			</div>
+																			<span class="input-group-btn  btn-right">
+																				<button class="btn blue-madison date-set"
+																					type="button">
+																					<i class="fa fa-calendar"></i>
+																				</button>
+																			</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-4">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<div class="input-group date form_datetime">
+																			<div class="input-group-control">
+																				<input type="text" class="form-control"
+																					readonly="true"></input> <label
+																					for="form_control_1">To Date</label>
+																			</div>
+																			<span class="input-group-btn btn-right">
+																				<button class="btn blue-madison date-set"
+																					type="button">
+																					<i class="fa fa-calendar"></i>
+																				</button>
+																			</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-4">
+																	<br />
+																	<div class="md-checkbox-inline">
+																		<div class="md-checkbox">
+																			<input type="checkbox" id="checkbox6"
+																				class="md-check"></input> <label for="checkbox6">
+																				<span></span> <span class="check"></span> <span
+																				class="box"></span> Presently Working Here
+																			</label>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div
+																class="form-group form-md-line-input form-md-floating-label">
+																<div class="input-group">
+																	<div class="input-group-control">
+																		<textarea class="form-control" rows="3"></textarea>
+																		<label for="form_control_1">Job Description
+																			&amp; Respoonsibilities</label>
+																	</div>
+																	<span class="input-group-btn btn-right">
+																		<button type="button" class="btn green-haze"
+																			aria-expanded="false">
+																			Add Another <i class="fa fa-globe"></i>
+																		</button>
+
+																	</span>
+																</div>
+															</div>
+														</div>
+													</h:form>
+												</div>
+											</div>
+											<!-- END SAMPLE FORM PORTLET-->
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade" id="tab_2_5">
+									 
+									<div class="row">
+										<div class="col-md-12 ">
+											<!-- BEGIN SAMPLE FORM PORTLET-->
+											<div class="portlet light bordered">
+												<div class="portlet-title">
+													<div class="caption font-red-sunglo">
+														<span class="caption-subject bold uppercase">General Questions</span>
+													</div>
+													<div class="actions">
+														<a class="btn btn-circle btn-icon-only blue"
+															href="javascript:;"> <i class="icon-cloud-upload"></i>
+														</a> <a class="btn btn-circle btn-icon-only green"
+															href="javascript:;"> <i class="icon-wrench"></i>
+														</a> <a class="btn btn-circle btn-icon-only red"
+															href="javascript:;"> <i class="icon-trash"></i>
+														</a> <a
+															class="btn btn-circle btn-icon-only btn-default fullscreen"
+															href="javascript:;" data-original-title="" title="">
+														</a>
+													</div>
+												</div>
+												<div class="portlet-body form">
+													<h:form role="form">
+														<div class="form-body">
+														<div
+														class="form-group form-md-line-input form-md-floating-label">
+														<textarea class="form-control" rows="3"></textarea>
+														<label for="form_control_1">Why this position needs to be filled?</label>
+													</div>
+													
+													<div class="row">
+																<div class="col-md-6">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<select class="form-control" id="form_control_1">
+																			<option value=""></option>
+																			<option value="1">Replacement</option>
+																			<option value="2">New Position</option>
+																			<option value="3">Option 3</option>
+																			<option value="4">Option 4</option>
+																		</select> <label for="form_control_1">Do you Require Work Permit?</label> <span
+																			class="help-block">Some help goes here...</span>
+																	</div>
+																</div>
+
+																<div class="col-md-6">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<select class="form-control" id="form_control_1">
+																			<option value=""></option>
+																			<option value="1">Replacement</option>
+																			<option value="2">New Position</option>
+																			<option value="3">Option 3</option>
+																			<option value="4">Option 4</option>
+																		</select> <label for="form_control_1">Nationality or Citizenship Requirement</label> <span
+																			class="help-block">Some help goes here...</span>
+																	</div>
+																</div>
+															</div> 
+															 
+															<div class="row">
+																<div class="col-md-6">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<select class="form-control" id="form_control_1">
+																			<option value=""></option>
+																			<option value="1">Replacement</option>
+																			<option value="2">New Position</option>
+																			<option value="3">Option 3</option>
+																			<option value="4">Option 4</option>
+																		</select> <label for="form_control_1">Do you require 3rd Party Job Post</label> <span
+																			class="help-block">Some help goes here...</span>
+																	</div>
+																</div>
+																<div class="col-md-6">
+																	<div
+																		class="form-group form-md-line-input form-md-floating-label">
+																		<input type="text" class="form-control"
+																			id="form_control_1"></input> <label
+																			for="form_control_1">If Require, any job board preference?</label> <span class="help-block">Some
+																			help goes here...</span>
+																	</div>
+																</div>
+
+															</div>
+															 <div
+														class="form-group form-md-line-input form-md-floating-label">
+														<textarea class="form-control" rows="3"></textarea>
+														<label for="form_control_1">Enter any other comments or remarks</label>
+													</div>
+															 
+															
+															 
+															  
+														</div>
+													</h:form>
+												</div>
+											</div>
+											<!-- END SAMPLE FORM PORTLET-->
+										</div>
+
+									</div>
+									 
+								</div>
+							</div>
+						</div>
+						<div class="form-actions noborder">
+							<button type="button" class="btn default">Save as Draft</button>
+							<button type="button" class="btn blue">Submit</button>
+							<button type="button" class="btn default">Cancel</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 ">
+				<!-- BEGIN SAMPLE TABLE PORTLET-->
+					<div class="portlet box yellow">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-archive"></i>APPROVAL PROCESS
+							</div>
+							<div class="tools">
+								<a href="javascript:;" class="collapse"> </a> <a
+									href="#portlet-config" data-toggle="modal" class="config">
+								</a> <a href="javascript:;" class="reload"> </a> <a
+									href="javascript:;" class="remove"> </a>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="table-scrollable">
+								<table class="table table-bordered table-hover">
+									<thead>
+										<tr>
+											<th>Leave Type</th>
+											<th>Balance (in days)</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="success">success</td>
+											<td class="warning">warning</td>
+										</tr>
+										<tr>
+											<td class="success">success</td>
+											<td class="warning">warning</td>
+										</tr>
+										<tr>
+											<td class="success">success</td>
+											<td class="warning">warning</td>
+										</tr>
+										<tr>
+											<td class="success">success</td>
+											<td class="warning">warning</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- END SAMPLE TABLE PORTLET-->
+					<!-- BEGIN Portlet PORTLET-->
+					<div class="portlet box purple">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-gift"></i>Home Office Agreement
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="scroller" style="height: 400px" data-rail-visible="1"
+								data-rail-color="yellow" data-handle-color="#a1b2bd">
+								<strong>Note to the Employee:</strong> <br /> Duis mollis, est
+								non commodo luctus, nisi erat porttitor ligula, eget lacinia
+								odio sem nec elit. Cras mattis consectetur purus sit amet
+								fermentum. Duis mollis, est non commodo luctus, nisi erat
+								porttitor ligula, eget lacinia odio sem nec elit. Cras mattis
+								consectetur purus sit amet fermentum. Duis mollis, est non
+								commodo luctus, nisi erat porttitor ligula, eget lacinia odio
+								sem nec elit. Cras mattis consectetur purus sit amet fermentum.
+								Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
+								eget lacinia odio sem nec elit. Cras mattis consectetur purus
+								sit amet fermentum. consectetur purus sit amet fermentum. Duis
+								mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+								lacinia odio sem nec elit. Cras mattis consectetur purus sit
+								amet fermentum.
+							</div>
+						</div>
+					</div>
+					<!-- END Portlet PORTLET-->
+				</div>
+			</div>
+		</div>
+		<!-- END CONTENT BODY -->
+	</ui:define>
+	<ui:define name="morejs">
+		<h:outputScript library="assets" name="global/plugins/moment.min.js" />
+		<h:outputScript library="assets"
+			name="global/plugins/bootstrap-daterangepicker/daterangepicker.min.js" />
+		<h:outputScript library="assets"
+			name="global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" />
+		<h:outputScript library="assets"
+			name="global/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js" />
+		<h:outputScript library="assets"
+			name="global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" />
+		<h:outputScript library="assets"
+			name="global/plugins/datatables/datatables.min.js" />
+		<h:outputScript library="assets"
+			name="global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js" />
+		<h:outputScript library="assets"
+			name="global/plugins/jquery-file-upload/js/jquery.fileupload.js" />
+		<h:outputScript library="assets"
+			name="global/plugins/jquery-file-upload/js/jquery.fileupload-validate.js" />
+		<h:outputScript library="assets"
+			name="global/plugins/jquery-file-upload/js/jquery.fileupload-ui.js" />
+		<h:outputScript library="assets"
+			name="pages/scripts/components-date-time-pickers.min.js" />
+		<h:outputScript library="assets" name="global/scripts/datatable.js" />
+		<h:outputScript library="assets"
+			name="pages/scripts/table-datatables-buttons.min.js" />
+		<h:outputScript library="assets"
+			name="pages/scripts/form-fileupload.min.js" />
+
+	</ui:define>
+</ui:composition>
+</html>

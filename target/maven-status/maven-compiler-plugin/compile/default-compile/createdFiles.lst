@@ -1,0 +1,10 @@
+hcm\user\beans\RoleBean.class
+hcm\global\utils\SessionBean.class
+hcm\global\utils\HibernateUtil.class
+hcm\global\cfg\HCMRealm.class
+hcm\user\models\RolesPermission.class
+hcm\user\models\UserRole.class
+hcm\global\cfg\HCMSaltedAuthentificationInfo.class
+hcm\global\utils\NavigationBean.class
+hcm\user\beans\UserBean.class
+hcm\user\models\User.class

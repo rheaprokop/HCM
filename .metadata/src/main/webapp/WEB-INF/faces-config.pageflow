@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14732726447400" configfile="/HumanCapitalMgmt/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="user-manage/login.xhtml" x="252" y="396" id="pf14747003134530" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" outlinks="pf14747921522070 pf14747921522071" inlinks="pf14747921522070" path="/login.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="user-manage/login.xhtml" x="308" y="216" id="pf14747099579451" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" path="/login.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="WEB-INF/template/default_layout.xhtml" x="122" y="946" id="pf14747106593863" referenceLink="//@navigationRule.1/@fromViewId|" path="workspace/dashboard.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="workspace/dashboard.xhtml" x="122" y="562" id="pf14747921522083" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14747921522071" path="/workspace/dashboard.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="user-manage/create-user.xhtml" x="122" y="1330" id="pf14747921522084" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf14747921522085 pf14753226852323 pf14754323988550 pf14754323988561" path="/user-manage/create-user.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="user-manage/view-user.xhtml" x="338" y="1512" id="pf14747921522086" referenceLink="//@navigationRule.5/@fromViewId|" outlinks="pf14754323988562" inlinks="pf14747921522085 pf14754323988550" path="/user-manage/view-user.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="user-manage/manage-users.xhtml" x="122" y="1714" id="pf14748086811241" referenceLink="//@navigationRule.4/@fromViewId|" outlinks="pf14916854983501" inlinks="pf14753226852323 pf14754323988561" path="/user-manage/manage-users.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="user-manage/edit-user.xhtml" id="pf14754323988565" referenceLink="//@navigationRule.5/@navigationCase.0/@toViewId|" inlinks="pf14754323988562 pf14916854983501" path="/user-manage/edit-user.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="user-manage/manage-roles.xhtml" id="pf14754324221726" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf14754324221727" path="/user-manage/manage-roles.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="user-manage/create-role.xhtml" id="pf14754324221728" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" inlinks="pf14754324221727" path="/user-manage/create-role.xhtml"/>
+  <links id="pf14747921522071" target="pf14747921522083" source="pf14747003134530" outcome="dashboard" redirect="true"/>
+  <links id="pf14747921522085" target="pf14747921522086" source="pf14747921522084" outcome="view-user"/>
+  <links id="pf14747921522070" target="pf14747003134530" source="pf14747003134530" outcome="login" redirect="true">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+  <links id="pf14753226852323" target="pf14748086811241" source="pf14747921522084" outcome="manage-user"/>
+  <links id="pf14754323988550" target="pf14747921522086" source="pf14747921522084" outcome="view-user"/>
+  <links id="pf14754323988561" target="pf14748086811241" source="pf14747921522084" outcome="manage-user"/>
+  <links id="pf14754323988562" target="pf14754323988565" source="pf14747921522086" outcome="edit-user"/>
+  <links id="pf14754324221727" target="pf14754324221728" source="pf14754324221726" outcome="create-role"/>
+  <links id="pf14916854983501" target="pf14754323988565" source="pf14748086811241" outcome="edit-user"/>
+</pageflow:Pageflow>

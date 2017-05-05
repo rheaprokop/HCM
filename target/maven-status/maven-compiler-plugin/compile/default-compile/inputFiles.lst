@@ -1,0 +1,10 @@
+D:\Project-hcm\HumanCapitalMgmt\src\main\java\hcm\user\models\User.java
+D:\Project-hcm\HumanCapitalMgmt\src\main\java\hcm\user\beans\RoleBean.java
+D:\Project-hcm\HumanCapitalMgmt\src\main\java\hcm\global\utils\HibernateUtil.java
+D:\Project-hcm\HumanCapitalMgmt\src\main\java\hcm\global\utils\SessionBean.java
+D:\Project-hcm\HumanCapitalMgmt\src\main\java\hcm\user\models\RolesPermission.java
+D:\Project-hcm\HumanCapitalMgmt\src\main\java\hcm\user\beans\UserBean.java
+D:\Project-hcm\HumanCapitalMgmt\src\main\java\hcm\user\models\UserRole.java
+D:\Project-hcm\HumanCapitalMgmt\src\main\java\hcm\global\utils\NavigationBean.java
+D:\Project-hcm\HumanCapitalMgmt\src\main\java\hcm\global\cfg\HCMSaltedAuthentificationInfo.java
+D:\Project-hcm\HumanCapitalMgmt\src\main\java\hcm\global\cfg\HCMRealm.java

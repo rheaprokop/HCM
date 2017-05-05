@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="/WEB-INF/template/default_layout.xhtml">
+	<ui:define name="morecss">
+		<h:outputStylesheet library="assets"
+			name="global/plugins/fancybox/source/jquery.fancybox.css" />
+		<h:outputStylesheet library="assets"
+			name="global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css" />
+		<h:outputStylesheet library="assets" name="apps/css/inbox.min.css"
+			rel="stylesheet" type="text/css" />
+
+	</ui:define>
+	<ui:define name="content">
+		<!-- BEGIN CONTENT BODY -->
+		<div class="page-content">
+			<!-- BEGIN PAGE HEADER-->
+			<ui:include src="/WEB-INF/template/uisetting.xhtml" />
+			<!-- BEGIN PAGE BAR -->
+			<div class="page-bar">
+				<ul class="page-breadcrumb">
+					<li><a href="index.html">My Workspace</a> <i
+						class="fa fa-circle"></i></li>
+					<li><span>My Inbox</span></li>
+				</ul>
+				<div class="page-toolbar">
+					<div class="btn-group pull-right">
+						<button type="button"
+							class="btn green btn-sm btn-outline dropdown-toggle"
+							data-toggle="dropdown">
+							Actions <i class="fa fa-angle-down"></i>
+						</button>
+						<ul class="dropdown-menu pull-right" role="menu">
+							<li><a href="#"> <i class="icon-bell"></i> Action
+							</a></li>
+							<li><a href="#"> <i class="icon-shield"></i> Another
+									action
+							</a></li>
+							<li><a href="#"> <i class="icon-user"></i> Something
+									else here
+							</a></li>
+							<li class="divider"></li>
+							<li><a href="#"> <i class="icon-bag"></i> Separated link
+							</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- END PAGE BAR -->
+			<!-- BEGIN PAGE TITLE-->
+			<h3 class="page-title">
+				Message Box 
+			</h3>
+			
+			<!-- END PAGE TITLE-->
+			<!-- END PAGE HEADER-->
+			<div class="inbox">
+				<div class="row">
+
+					<div class="col-md-12">
+						<div class="inbox-body">
+							<div class="inbox-header">
+								<h1 class="pull-left">Inbox</h1>
+								<form class="form-inline pull-right" action="index.html">
+									<div class="input-group input-medium">
+										<a href="javascript:;" data-title="Compose"
+											class="btn red compose-btn btn-block"> <i
+											class="fa fa-edit"></i> Compose
+										</a>
+									</div>
+								</form>
+							</div>
+							<div class="my-inbox-content">
+								<table class="table table-striped table-advance table-hover">
+									<thead>
+										<tr>
+											<th colspan="3"><input type="checkbox"
+												class="mail-checkbox mail-group-checkbox"></input>
+												<div class="btn-group input-actions">
+													<a
+														class="btn btn-sm blue btn-outline dropdown-toggle sbold"
+														href="javascript:;" data-toggle="dropdown"> Actions <i
+														class="fa fa-angle-down"></i>
+													</a>
+													<ul class="dropdown-menu">
+														<li><a href="javascript:;"> <i
+																class="fa fa-pencil"></i> Mark as Read
+														</a></li>
+														<li><a href="javascript:;"> <i class="fa fa-ban"></i>
+																Spam
+														</a></li>
+														<li class="divider"></li>
+														<li><a href="javascript:;"> <i
+																class="fa fa-trash-o"></i> Delete
+														</a></li>
+													</ul>
+												</div></th>
+											<th class="pagination-control" colspan="3"><span
+												class="pagination-info"> 1-30 of 789 </span> <a
+												class="btn btn-sm blue btn-outline"> <i
+													class="fa fa-angle-left"></i>
+											</a> <a class="btn btn-sm blue btn-outline"> <i
+													class="fa fa-angle-right"></i>
+											</a></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="unread" data-messageid="1">
+											<td class="inbox-small-cells"><input type="checkbox"
+												class="mail-checkbox"></input></td>
+											<td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+											<td class="view-message hidden-xs">Petronas IT</td>
+											<td class="view-message ">New server for datacenter
+												needed</td>
+											<td class="view-message inbox-small-cells"><i
+												class="fa fa-paperclip"></i></td>
+											<td class="view-message text-right">16:30 PM</td>
+										</tr>
+										<tr class="unread" data-messageid="2">
+											<td class="inbox-small-cells"><input type="checkbox"
+												class="mail-checkbox"></input></td>
+											<td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+											<td class="view-message hidden-xs">Daniel Wong</td>
+											<td class="view-message">Please help us on customization
+												of new secure server</td>
+											<td class="view-message inbox-small-cells"></td>
+											<td class="view-message text-right">March 15</td>
+										</tr>
+										<tr data-messageid="3">
+											<td class="inbox-small-cells"><input type="checkbox"
+												class="mail-checkbox"></input></td>
+											<td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+											<td class="view-message hidden-xs">John Doe</td>
+											<td class="view-message">Lorem ipsum dolor sit amet</td>
+											<td class="view-message inbox-small-cells"></td>
+											<td class="view-message text-right">March 15</td>
+										</tr>
+										<tr data-messageid="4">
+											<td class="inbox-small-cells"><input type="checkbox"
+												class="mail-checkbox"></input></td>
+											<td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+											<td class="view-message hidden-xs">Facebook</td>
+											<td class="view-message">Dolor sit amet, consectetuer
+												adipiscing</td>
+											<td class="view-message inbox-small-cells"></td>
+											<td class="view-message text-right">March 14</td>
+										</tr>
+										<tr data-messageid="5">
+											<td class="inbox-small-cells"><input type="checkbox"
+												class="mail-checkbox"></input></td>
+											<td class="inbox-small-cells"><i
+												class="fa fa-star inbox-started"></i></td>
+											<td class="view-message hidden-xs">John Doe</td>
+											<td class="view-message">Lorem ipsum dolor sit amet</td>
+											<td class="view-message inbox-small-cells"></td>
+											<td class="view-message text-right">March 15</td>
+										</tr>
+										<tr data-messageid="6">
+											<td class="inbox-small-cells"><input type="checkbox"
+												class="mail-checkbox"></input></td>
+											<td class="inbox-small-cells"><i
+												class="fa fa-star inbox-started"></i></td>
+											<td class="view-message hidden-xs">Facebook</td>
+											<td class="view-message">Dolor sit amet, consectetuer
+												adipiscing</td>
+											<td class="view-message inbox-small-cells"><i
+												class="fa fa-paperclip"></i></td>
+											<td class="view-message text-right">March 14</td>
+										</tr>
+										<tr data-messageid="7">
+											<td class="inbox-small-cells"><input type="checkbox"
+												class="mail-checkbox"></input></td>
+											<td class="inbox-small-cells"><i
+												class="fa fa-star inbox-started"></i></td>
+											<td class="view-message hidden-xs">John Doe</td>
+											<td class="view-message">Lorem ipsum dolor sit amet</td>
+											<td class="view-message inbox-small-cells"><i
+												class="fa fa-paperclip"></i></td>
+											<td class="view-message text-right">March 15</td>
+										</tr>
+										<tr data-messageid="8">
+											<td class="inbox-small-cells"><input type="checkbox"
+												class="mail-checkbox"></input></td>
+											<td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+											<td class="view-message hidden-xs">Facebook</td>
+											<td class="view-message view-message">Dolor sit amet,
+												consectetuer adipiscing</td>
+											<td class="view-message inbox-small-cells"></td>
+											<td class="view-message text-right">March 14</td>
+										</tr>
+										<tr data-messageid="9">
+											<td class="inbox-small-cells"><input type="checkbox"
+												class="mail-checkbox"></input></td>
+											<td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+											<td class="view-message hidden-xs">John Doe</td>
+											<td class="view-message view-message">Lorem ipsum dolor
+												sit amet</td>
+											<td class="view-message inbox-small-cells"></td>
+											<td class="view-message text-right">March 15</td>
+										</tr>
+										<tr data-messageid="10">
+											<td class="inbox-small-cells"><input type="checkbox"
+												class="mail-checkbox"></input></td>
+											<td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+											<td class="view-message hidden-xs">Facebook</td>
+											<td class="view-message view-message">Dolor sit amet,
+												consectetuer adipiscing</td>
+											<td class="view-message inbox-small-cells"></td>
+											<td class="view-message text-right">March 14</td>
+										</tr>
+										<tr data-messageid="11">
+											<td class="inbox-small-cells"><input type="checkbox"
+												class="mail-checkbox"></input></td>
+											<td class="inbox-small-cells"><i
+												class="fa fa-star inbox-started"></i></td>
+											<td class="view-message hidden-xs">John Doe</td>
+											<td class="view-message">Lorem ipsum dolor sit amet</td>
+											<td class="view-message inbox-small-cells"></td>
+											<td class="view-message text-right">March 15</td>
+										</tr>
+										<tr data-messageid="12">
+											<td class="inbox-small-cells"><input type="checkbox"
+												class="mail-checkbox"></input></td>
+											<td class="inbox-small-cells"><i
+												class="fa fa-star inbox-started"></i></td>
+											<td class="hidden-xs">Facebook</td>
+											<td class="view-message">Dolor sit amet, consectetuer
+												adipiscing</td>
+											<td class="view-message inbox-small-cells"><i
+												class="fa fa-paperclip"></i></td>
+											<td class="view-message text-right">March 14</td>
+										</tr>
+										<tr data-messageid="13">
+											<td class="inbox-small-cells"><input type="checkbox"
+												class="mail-checkbox"></input></td>
+											<td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+											<td class="view-message hidden-xs">John Doe</td>
+											<td class="view-message">Lorem ipsum dolor sit amet</td>
+											<td class="view-message inbox-small-cells"><i
+												class="fa fa-paperclip"></i></td>
+											<td class="view-message text-right">March 15</td>
+										</tr>
+										<tr data-messageid="14">
+											<td class="inbox-small-cells"><input type="checkbox"
+												class="mail-checkbox"></input></td>
+											<td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+											<td class="hidden-xs">Facebook</td>
+											<td class="view-message view-message">Dolor sit amet,
+												consectetuer adipiscing</td>
+											<td class="view-message inbox-small-cells"></td>
+											<td class="view-message text-right">March 14</td>
+										</tr>
+
+									</tbody>
+								</table>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END CONTENT BODY -->
+	</ui:define>
+	<ui:define name="morejs">
+
+		<h:outputScript library="assets"
+			name="global/plugins/fancybox/source/jquery.fancybox.pack.js" />
+		<h:outputScript library="assets"
+			name="global/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js" />
+		<h:outputScript library="assets"
+			name="global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js" />
+	</ui:define>
+</ui:composition>
+</html>

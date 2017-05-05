@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="/WEB-INF/template/default_layout.xhtml">
+	<ui:define name="morecss">
+		<h:outputStylesheet library="assets"
+			name="global/plugins/fancybox/source/jquery.fancybox.css" />
+		<h:outputStylesheet library="assets"
+			name="global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css" />
+		<h:outputStylesheet library="assets" name="apps/css/inbox.min.css"
+			rel="stylesheet" type="text/css" />
+
+	</ui:define>
+	<ui:define name="content">
+		<!-- BEGIN CONTENT BODY -->
+		<div class="page-content">
+			<!-- BEGIN PAGE HEADER-->
+			<ui:include src="/WEB-INF/template/uisetting.xhtml" />
+			<!-- BEGIN PAGE BAR -->
+			<div class="page-bar">
+				<ul class="page-breadcrumb">
+					<li><a href="index.html">My Workspace</a> <i
+						class="fa fa-circle"></i></li>
+					<li><span>My Inbox</span></li>
+				</ul>
+				<div class="page-toolbar">
+					<div class="btn-group pull-right">
+						<button type="button"
+							class="btn green btn-sm btn-outline dropdown-toggle"
+							data-toggle="dropdown">
+							Actions <i class="fa fa-angle-down"></i>
+						</button>
+						<ul class="dropdown-menu pull-right" role="menu">
+							<li><a href="#"> <i class="icon-bell"></i> Action
+							</a></li>
+							<li><a href="#"> <i class="icon-shield"></i> Another
+									action
+							</a></li>
+							<li><a href="#"> <i class="icon-user"></i> Something
+									else here
+							</a></li>
+							<li class="divider"></li>
+							<li><a href="#"> <i class="icon-bag"></i> Separated link
+							</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- END PAGE BAR -->
+			<!-- BEGIN PAGE TITLE-->
+			<h3 class="page-title">
+				Inbox <small>user inbox</small>
+			</h3>
+			<!-- END PAGE TITLE-->
+			<!-- END PAGE HEADER-->
+			<div class="inbox">
+				<div class="row">
+					 
+					<div class="col-md-12">
+						<div class="inbox-body">
+							<div class="inbox-header">
+								<h1 class="pull-left">Compose A Message</h1>
+								<form class="form-inline pull-right" action="index.html">
+									<div class="input-group input-medium">
+										
+									</div>
+								</form>
+							</div>
+							<div class="my-inbox-compose">
+								<form class="inbox-compose form-horizontal" id="fileupload"
+									action="#" enctype="multipart/form-data">
+									<div class="inbox-compose-btn">
+										<button class="btn green">
+											<i class="fa fa-check"></i>Send
+										</button>
+										<button class="btn default inbox-discard-btn">Discard</button>
+										<button class="btn default">Draft</button>
+									</div>
+									<div class="inbox-form-group mail-to">
+										<label class="control-label">To:</label>
+										<div class="controls controls-to">
+											<input type="text" class="form-control" name="to"></input> <span
+												class="inbox-cc-bcc"> <span class="inbox-cc">
+														Cc </span> <span class="inbox-bcc"> Bcc </span>
+											</span>
+										</div>
+									</div>
+									<div class="inbox-form-group input-cc display-hide">
+										<a href="javascript:;" class="close"> </a> <label
+											class="control-label">Cc:</label>
+										<div class="controls controls-cc">
+											<input type="text" name="cc" class="form-control"></input>
+										</div>
+									</div>
+									<div class="inbox-form-group input-bcc display-hide">
+										<a href="javascript:;" class="close"> </a> <label
+											class="control-label">Bcc:</label>
+										<div class="controls controls-bcc">
+											<input type="text" name="bcc" class="form-control"></input>
+										</div>
+									</div>
+									<div class="inbox-form-group">
+										<label class="control-label">Subject:</label>
+										<div class="controls">
+											<input type="text" class="form-control" name="subject"></input>
+										</div>
+									</div>
+									<div class="inbox-form-group">
+										<textarea class="inbox-editor inbox-wysihtml5 form-control"
+											name="message" rows="12"></textarea>
+									</div>
+									<div class="inbox-compose-btn">
+										<button class="btn green">
+											<i class="fa fa-check"></i>Send
+										</button>
+										<button class="btn default">Discard</button>
+										<button class="btn default">Draft</button>
+									</div>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END CONTENT BODY -->
+	</ui:define>
+	<ui:define name="morejs">
+
+		<h:outputScript library="assets"
+			name="global/plugins/fancybox/source/jquery.fancybox.pack.js" />
+		<h:outputScript library="assets"
+			name="global/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js" />
+		<h:outputScript library="assets"
+			name="global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js" />
+		<h:outputScript library="assets" name="apps/scripts/inbox.min.js" />
+	</ui:define>
+</ui:composition>
+</html>
